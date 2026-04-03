@@ -1,0 +1,13 @@
+services:
+  php:
+    image: php:8.2-cli
+    working_dir: /app
+    volumes:
+      - .:/app
+    entrypoint: ["php"]
+
+  composer:
+    image: composer:latest
+    working_dir: /app
+    volumes:
+      - .:/app
