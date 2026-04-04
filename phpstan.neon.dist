@@ -2,4 +2,5 @@ parameters:
     level: 8
     paths:
         - packages/core/src
+        - packages/cqrs/src
         - packages/ddd/src

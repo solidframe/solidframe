@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b523d1ee913dcf3cde97d8db88eb645e",
+    "content-hash": "3e69716993c1fecc2c4089878c252b23",
     "packages": [],
     "packages-dev": [
         {
@@ -3021,6 +3021,48 @@
             }
         },
         {
+            "name": "solidframe/cqrs",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/cqrs",
+                "reference": "d21fedf8ff6dd6c9a508a58de24c3458d475d694"
+            },
+            "require": {
+                "php": "^8.2",
+                "solidframe/core": "^0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SolidFrame\\Cqrs\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "SolidFrame\\Cqrs\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abdulkadir Posul",
+                    "email": "abdulkadir-posul@users.noreply.github.com"
+                }
+            ],
+            "description": "CQRS building blocks: Command, Query, Handlers, and Bus implementations for SolidFrame",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "solidframe/ddd",
             "version": "dev-main",
             "dist": {
@@ -4583,6 +4625,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "solidframe/core": 20,
+        "solidframe/cqrs": 20,
         "solidframe/ddd": 20
     },
     "prefer-stable": true,

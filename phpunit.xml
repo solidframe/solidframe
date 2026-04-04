@@ -11,10 +11,14 @@
         <testsuite name="Ddd">
             <directory>packages/ddd/tests</directory>
         </testsuite>
+        <testsuite name="Cqrs">
+            <directory>packages/cqrs/tests</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>
             <directory>packages/core/src</directory>
+            <directory>packages/cqrs/src</directory>
             <directory>packages/ddd/src</directory>
         </include>
     </source>
