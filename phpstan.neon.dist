@@ -4,3 +4,4 @@ parameters:
         - packages/core/src
         - packages/cqrs/src
         - packages/ddd/src
+        - packages/event-driven/src

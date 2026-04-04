@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3e69716993c1fecc2c4089878c252b23",
+    "content-hash": "6bb8b3ee44a1e9b3513e7e3fcd5dc614",
     "packages": [],
     "packages-dev": [
         {
@@ -3105,6 +3105,48 @@
             }
         },
         {
+            "name": "solidframe/event-driven",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/event-driven",
+                "reference": "f91358adbc73e7d2f64e0da5b309a2f076e376bc"
+            },
+            "require": {
+                "php": "^8.2",
+                "solidframe/core": "^0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SolidFrame\\EventDriven\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "SolidFrame\\EventDriven\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abdulkadir Posul",
+                    "email": "abdulkadir-posul@users.noreply.github.com"
+                }
+            ],
+            "description": "Event-driven building blocks: EventBus implementation, listener resolver for SolidFrame",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "staabm/side-effects-detector",
             "version": "1.0.5",
             "source": {
@@ -4626,7 +4668,8 @@
     "stability-flags": {
         "solidframe/core": 20,
         "solidframe/cqrs": 20,
-        "solidframe/ddd": 20
+        "solidframe/ddd": 20,
+        "solidframe/event-driven": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

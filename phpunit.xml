@@ -14,12 +14,16 @@
         <testsuite name="Cqrs">
             <directory>packages/cqrs/tests</directory>
         </testsuite>
+        <testsuite name="EventDriven">
+            <directory>packages/event-driven/tests</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>
             <directory>packages/core/src</directory>
             <directory>packages/cqrs/src</directory>
             <directory>packages/ddd/src</directory>
+            <directory>packages/event-driven/src</directory>
         </include>
     </source>
 </phpunit>
