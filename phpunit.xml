@@ -8,10 +8,14 @@
         <testsuite name="Core">
             <directory>packages/core/tests</directory>
         </testsuite>
+        <testsuite name="Ddd">
+            <directory>packages/ddd/tests</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>
             <directory>packages/core/src</directory>
+            <directory>packages/ddd/src</directory>
         </include>
     </source>
 </phpunit>
