@@ -23,6 +23,9 @@
         <testsuite name="Modular">
             <directory>packages/modular/tests</directory>
         </testsuite>
+        <testsuite name="Saga">
+            <directory>packages/saga/tests</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>
@@ -32,6 +35,7 @@
             <directory>packages/event-driven/src</directory>
             <directory>packages/event-sourcing/src</directory>
             <directory>packages/modular/src</directory>
+            <directory>packages/saga/src</directory>
         </include>
     </source>
 </phpunit>

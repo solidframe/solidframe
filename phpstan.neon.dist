@@ -7,3 +7,4 @@ parameters:
         - packages/event-driven/src
         - packages/event-sourcing/src
         - packages/modular/src
+        - packages/saga/src

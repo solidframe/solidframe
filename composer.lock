@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f1308956875fbc206ba495a82d21e412",
+    "content-hash": "090419d38b8c3f45158e2da706ef2681",
     "packages": [],
     "packages-dev": [
         {
@@ -3232,6 +3232,48 @@
             }
         },
         {
+            "name": "solidframe/saga",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/saga",
+                "reference": "8c4c034fa2a9563f5600492c409599b454dc0221"
+            },
+            "require": {
+                "php": "^8.2",
+                "solidframe/core": "^0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SolidFrame\\Saga\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "SolidFrame\\Saga\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abdulkadir Posul",
+                    "email": "abdulkadir-posul@users.noreply.github.com"
+                }
+            ],
+            "description": "Saga / Process Manager building blocks: saga lifecycle, compensation, correlation, store for SolidFrame",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "staabm/side-effects-detector",
             "version": "1.0.5",
             "source": {
@@ -4756,7 +4798,8 @@
         "solidframe/ddd": 20,
         "solidframe/event-driven": 20,
         "solidframe/event-sourcing": 20,
-        "solidframe/modular": 20
+        "solidframe/modular": 20,
+        "solidframe/saga": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
