@@ -1,0 +1,35 @@
+{
+    "name": "solidframe/event-sourcing",
+    "description": "Event Sourcing building blocks: EventStore, Snapshot, event-sourced AggregateRoot for SolidFrame",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abdulkadir Posul",
+            "email": "abdulkadir-posul@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "solidframe/core": "^0.1",
+        "solidframe/ddd": "^0.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "SolidFrame\\EventSourcing\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SolidFrame\\EventSourcing\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-main": "0.1.x-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}

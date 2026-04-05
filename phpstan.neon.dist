@@ -5,3 +5,4 @@ parameters:
         - packages/cqrs/src
         - packages/ddd/src
         - packages/event-driven/src
+        - packages/event-sourcing/src

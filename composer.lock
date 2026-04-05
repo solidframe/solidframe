@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bb8b3ee44a1e9b3513e7e3fcd5dc614",
+    "content-hash": "a5bf14b744d9c81e79b3ec70d7c68c95",
     "packages": [],
     "packages-dev": [
         {
@@ -3147,6 +3147,49 @@
             }
         },
         {
+            "name": "solidframe/event-sourcing",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/event-sourcing",
+                "reference": "e6e6a1eefd1440a6c834ce3024b555cd9c84b31e"
+            },
+            "require": {
+                "php": "^8.2",
+                "solidframe/core": "^0.1",
+                "solidframe/ddd": "^0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SolidFrame\\EventSourcing\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "SolidFrame\\EventSourcing\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abdulkadir Posul",
+                    "email": "abdulkadir-posul@users.noreply.github.com"
+                }
+            ],
+            "description": "Event Sourcing building blocks: EventStore, Snapshot, event-sourced AggregateRoot for SolidFrame",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "staabm/side-effects-detector",
             "version": "1.0.5",
             "source": {
@@ -4669,7 +4712,8 @@
         "solidframe/core": 20,
         "solidframe/cqrs": 20,
         "solidframe/ddd": 20,
-        "solidframe/event-driven": 20
+        "solidframe/event-driven": 20,
+        "solidframe/event-sourcing": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

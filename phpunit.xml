@@ -17,6 +17,9 @@
         <testsuite name="EventDriven">
             <directory>packages/event-driven/tests</directory>
         </testsuite>
+        <testsuite name="EventSourcing">
+            <directory>packages/event-sourcing/tests</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>
@@ -24,6 +27,7 @@
             <directory>packages/cqrs/src</directory>
             <directory>packages/ddd/src</directory>
             <directory>packages/event-driven/src</directory>
+            <directory>packages/event-sourcing/src</directory>
         </include>
     </source>
 </phpunit>
