@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a5bf14b744d9c81e79b3ec70d7c68c95",
+    "content-hash": "f1308956875fbc206ba495a82d21e412",
     "packages": [],
     "packages-dev": [
         {
@@ -3190,6 +3190,48 @@
             }
         },
         {
+            "name": "solidframe/modular",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/modular",
+                "reference": "2a8e0690bdae8ee7eff86d96775ac60951a0bda3"
+            },
+            "require": {
+                "php": "^8.2",
+                "solidframe/core": "^0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SolidFrame\\Modular\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "SolidFrame\\Modular\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abdulkadir Posul",
+                    "email": "abdulkadir-posul@users.noreply.github.com"
+                }
+            ],
+            "description": "Modular monolith building blocks: module contracts, integration events, ACL, registry for SolidFrame",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "staabm/side-effects-detector",
             "version": "1.0.5",
             "source": {
@@ -4713,7 +4755,8 @@
         "solidframe/cqrs": 20,
         "solidframe/ddd": 20,
         "solidframe/event-driven": 20,
-        "solidframe/event-sourcing": 20
+        "solidframe/event-sourcing": 20,
+        "solidframe/modular": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

@@ -20,6 +20,9 @@
         <testsuite name="EventSourcing">
             <directory>packages/event-sourcing/tests</directory>
         </testsuite>
+        <testsuite name="Modular">
+            <directory>packages/modular/tests</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>
@@ -28,6 +31,7 @@
             <directory>packages/ddd/src</directory>
             <directory>packages/event-driven/src</directory>
             <directory>packages/event-sourcing/src</directory>
+            <directory>packages/modular/src</directory>
         </include>
     </source>
 </phpunit>
