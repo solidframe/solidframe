@@ -1,0 +1,76 @@
+parameters:
+    solidframe:
+        commandHandlerInterface: 'SolidFrame\Cqrs\CommandHandler'
+        queryHandlerInterface: 'SolidFrame\Cqrs\QueryHandler'
+        commandInterface: 'SolidFrame\Cqrs\Command'
+        queryInterface: 'SolidFrame\Cqrs\Query'
+        eventInterface: 'SolidFrame\Core\Event\DomainEventInterface'
+        valueObjectInterface: 'SolidFrame\Ddd\ValueObject\ValueObjectInterface'
+        aggregateRootClass: 'SolidFrame\EventSourcing\Aggregate\AbstractEventSourcedAggregateRoot'
+
+services:
+    -
+        class: SolidFrame\PHPStanRules\Rules\Cqrs\CommandHandlerMustReturnVoidRule
+        arguments:
+            handlerInterface: %solidframe.commandHandlerInterface%
+        tags: [phpstan.rules.rule]
+
+    -
+        class: SolidFrame\PHPStanRules\Rules\Cqrs\QueryHandlerMustNotReturnVoidRule
+        arguments:
+            handlerInterface: %solidframe.queryHandlerInterface%
+        tags: [phpstan.rules.rule]
+
+    -
+        class: SolidFrame\PHPStanRules\Rules\Cqrs\HandlerMustBeInvokableRule
+        arguments:
+            handlerInterfaces:
+                - %solidframe.commandHandlerInterface%
+                - %solidframe.queryHandlerInterface%
+        tags: [phpstan.rules.rule]
+
+    solidframe.commandMustBeFinalReadonly:
+        class: SolidFrame\PHPStanRules\Rules\Cqrs\MessageMustBeFinalReadonlyRule
+        arguments:
+            messageInterface: %solidframe.commandInterface%
+            label: 'Command'
+        tags: [phpstan.rules.rule]
+
+    solidframe.queryMustBeFinalReadonly:
+        class: SolidFrame\PHPStanRules\Rules\Cqrs\MessageMustBeFinalReadonlyRule
+        arguments:
+            messageInterface: %solidframe.queryInterface%
+            label: 'Query'
+        tags: [phpstan.rules.rule]
+
+    -
+        class: SolidFrame\PHPStanRules\Rules\Cqrs\MessageMustNotExtendRule
+        arguments:
+            messageInterfaces:
+                - %solidframe.commandInterface%
+                - %solidframe.queryInterface%
+        tags: [phpstan.rules.rule]
+
+    -
+        class: SolidFrame\PHPStanRules\Rules\EventSourcing\EventMustBeFinalReadonlyRule
+        arguments:
+            eventInterface: %solidframe.eventInterface%
+        tags: [phpstan.rules.rule]
+
+    -
+        class: SolidFrame\PHPStanRules\Rules\EventSourcing\ApplyMethodMustExistRule
+        arguments:
+            aggregateRootClass: %solidframe.aggregateRootClass%
+        tags: [phpstan.rules.rule]
+
+    -
+        class: SolidFrame\PHPStanRules\Rules\Ddd\ValueObjectMustBeReadonlyRule
+        arguments:
+            valueObjectInterface: %solidframe.valueObjectInterface%
+        tags: [phpstan.rules.rule]
+
+    -
+        class: SolidFrame\PHPStanRules\Rules\Ddd\NoDirectAggregateConstructionRule
+        arguments:
+            aggregateRootClass: %solidframe.aggregateRootClass%
+        tags: [phpstan.rules.rule]

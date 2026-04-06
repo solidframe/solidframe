@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c26ef84f930a0ffe18e9d4249a75c66",
+    "content-hash": "f961e5d77418a7465a0d76c9f5894dda",
     "packages": [],
     "packages-dev": [
         {
@@ -3274,6 +3274,53 @@
             }
         },
         {
+            "name": "solidframe/phpstan-rules",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/phpstan-rules",
+                "reference": "587ec2dfa0023e1809bc5b8c1b02a4ea85d84791"
+            },
+            "require": {
+                "php": "^8.2",
+                "phpstan/phpstan": "^2.1"
+            },
+            "type": "phpstan-extension",
+            "extra": {
+                "phpstan": {
+                    "includes": [
+                        "extension.neon"
+                    ]
+                },
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SolidFrame\\PHPStanRules\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "SolidFrame\\PHPStanRules\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abdulkadir Posul",
+                    "email": "abdulkadir-posul@users.noreply.github.com"
+                }
+            ],
+            "description": "PHPStan rules for DDD, CQRS, and Event Sourcing architectural enforcement",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "solidframe/saga",
             "version": "dev-main",
             "dist": {
@@ -4842,6 +4889,7 @@
         "solidframe/event-driven": 20,
         "solidframe/event-sourcing": 20,
         "solidframe/modular": 20,
+        "solidframe/phpstan-rules": 20,
         "solidframe/saga": 20
     },
     "prefer-stable": true,

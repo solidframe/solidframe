@@ -20,6 +20,7 @@
         "solidframe/event-sourcing": "@dev",
         "solidframe/modular": "@dev",
         "solidframe/archtest": "@dev",
+        "solidframe/phpstan-rules": "@dev",
         "solidframe/saga": "@dev",
         "friendsofphp/php-cs-fixer": "^3.94",
         "phpstan/phpstan": "^2.1",
@@ -35,6 +36,16 @@
         "test": "phpunit",
         "qa": ["@cs:check", "@analyse", "@rector:check", "@test"],
         "qa:fix": ["@cs:fix", "@rector:fix"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SolidFrame\\PHPStanRules\\Tests\\": "packages/phpstan-rules/tests/"
+        },
+        "classmap": [
+            "packages/phpstan-rules/tests/Rules/Cqrs/data",
+            "packages/phpstan-rules/tests/Rules/Ddd/data",
+            "packages/phpstan-rules/tests/Rules/EventSourcing/data"
+        ]
     },
     "repositories": [
         {

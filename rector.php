@@ -9,6 +9,11 @@ return RectorConfig::configure()
         __DIR__ . '/packages/*/src',
         __DIR__ . '/packages/*/tests',
     ])
+    ->withSkip([
+        __DIR__ . '/packages/phpstan-rules/tests/Rules/Cqrs/data/*',
+        __DIR__ . '/packages/phpstan-rules/tests/Rules/Ddd/data/*',
+        __DIR__ . '/packages/phpstan-rules/tests/Rules/EventSourcing/data/*',
+    ])
     ->withPhpSets(php82: true)
     ->withPreparedSets(
         deadCode: true,
