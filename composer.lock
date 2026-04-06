@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "090419d38b8c3f45158e2da706ef2681",
+    "content-hash": "8c26ef84f930a0ffe18e9d4249a75c66",
     "packages": [],
     "packages-dev": [
         {
@@ -2977,6 +2977,48 @@
             "time": "2024-10-09T05:16:32+00:00"
         },
         {
+            "name": "solidframe/archtest",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "packages/archtest",
+                "reference": "1a29809e2395f598db3ccab0b7503bf813d969f6"
+            },
+            "require": {
+                "php": "^8.2",
+                "solidframe/core": "^0.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SolidFrame\\Archtest\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "SolidFrame\\Archtest\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Abdulkadir Posul",
+                    "email": "abdulkadir-posul@users.noreply.github.com"
+                }
+            ],
+            "description": "Architecture testing with fluent API: enforce DDD, CQRS, modular rules as PHPUnit tests for SolidFrame",
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "solidframe/core",
             "version": "dev-main",
             "dist": {
@@ -4793,6 +4835,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "solidframe/archtest": 20,
         "solidframe/core": 20,
         "solidframe/cqrs": 20,
         "solidframe/ddd": 20,

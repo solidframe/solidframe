@@ -8,3 +8,4 @@ parameters:
         - packages/event-sourcing/src
         - packages/modular/src
         - packages/saga/src
+        - packages/archtest/src

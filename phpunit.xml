@@ -26,6 +26,9 @@
         <testsuite name="Saga">
             <directory>packages/saga/tests</directory>
         </testsuite>
+        <testsuite name="Archtest">
+            <directory>packages/archtest/tests</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>
@@ -36,6 +39,7 @@
             <directory>packages/event-sourcing/src</directory>
             <directory>packages/modular/src</directory>
             <directory>packages/saga/src</directory>
+            <directory>packages/archtest/src</directory>
         </include>
     </source>
 </phpunit>
