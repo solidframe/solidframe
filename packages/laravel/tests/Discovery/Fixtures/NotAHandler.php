@@ -6,6 +6,5 @@ namespace SolidFrame\Laravel\Tests\Discovery\Fixtures;
 
 final class NotAHandler
 {
-    /** @param CreateOrderCommand $command */
     public function __invoke(CreateOrderCommand $command): void {}
 }

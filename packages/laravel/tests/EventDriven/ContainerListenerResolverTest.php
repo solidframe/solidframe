@@ -55,12 +55,10 @@ final readonly class FakeEvent {}
 
 final class FakeEventListenerA
 {
-    /** @param FakeEvent $event */
     public function __invoke(FakeEvent $event): void {}
 }
 
 final class FakeEventListenerB
 {
-    /** @param FakeEvent $event */
     public function __invoke(FakeEvent $event): void {}
 }

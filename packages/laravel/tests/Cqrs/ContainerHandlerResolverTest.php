@@ -68,7 +68,6 @@ final readonly class FakeCommand {}
 
 final class FakeCommandHandler
 {
-    /** @param FakeCommand $command */
     public function __invoke(FakeCommand $command): void {}
 }
 
@@ -78,6 +77,5 @@ final readonly class FakeHandlerWithDependency
 {
     public function __construct(public FakeDependency $dependency) {}
 
-    /** @param FakeCommand $command */
     public function __invoke(FakeCommand $command): void {}
 }
