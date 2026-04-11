@@ -35,6 +35,9 @@
         <testsuite name="Laravel">
             <directory>packages/laravel/tests</directory>
         </testsuite>
+        <testsuite name="Symfony">
+            <directory>packages/symfony/tests</directory>
+        </testsuite>
     </testsuites>
     <source>
         <include>
@@ -47,6 +50,7 @@
             <directory>packages/saga/src</directory>
             <directory>packages/archtest/src</directory>
             <directory>packages/laravel/src</directory>
+            <directory>packages/symfony/src</directory>
         </include>
     </source>
 </phpunit>

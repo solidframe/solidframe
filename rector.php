@@ -18,6 +18,7 @@ return RectorConfig::configure()
             __DIR__ . '/packages/laravel/tests/Discovery/Fixtures/*',
             __DIR__ . '/packages/laravel/tests/Cqrs/ContainerHandlerResolverTest.php',
             __DIR__ . '/packages/laravel/tests/EventDriven/ContainerListenerResolverTest.php',
+            __DIR__ . '/packages/symfony/tests/Discovery/Fixtures/*',
         ],
     ])
     ->withPhpSets(php82: true)
