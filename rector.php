@@ -13,6 +13,9 @@ return RectorConfig::configure()
         __DIR__ . '/packages/phpstan-rules/tests/Rules/Cqrs/data/*',
         __DIR__ . '/packages/phpstan-rules/tests/Rules/Ddd/data/*',
         __DIR__ . '/packages/phpstan-rules/tests/Rules/EventSourcing/data/*',
+        __DIR__ . '/packages/laravel/tests/Discovery/Fixtures/*',
+        __DIR__ . '/packages/laravel/tests/Cqrs/ContainerHandlerResolverTest.php',
+        __DIR__ . '/packages/laravel/tests/EventDriven/ContainerListenerResolverTest.php',
     ])
     ->withPhpSets(php82: true)
     ->withPreparedSets(

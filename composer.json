@@ -22,6 +22,8 @@
         "solidframe/archtest": "@dev",
         "solidframe/phpstan-rules": "@dev",
         "solidframe/saga": "@dev",
+        "solidframe/laravel": "@dev",
+        "orchestra/testbench": "^8.0 || ^9.0 || ^10.0",
         "friendsofphp/php-cs-fixer": "^3.94",
         "phpstan/phpstan": "^2.1",
         "phpunit/phpunit": "^11.0",
@@ -39,7 +41,8 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "SolidFrame\\PHPStanRules\\Tests\\": "packages/phpstan-rules/tests/"
+            "SolidFrame\\PHPStanRules\\Tests\\": "packages/phpstan-rules/tests/",
+            "SolidFrame\\Laravel\\Tests\\": "packages/laravel/tests/"
         },
         "classmap": [
             "packages/phpstan-rules/tests/Rules/Cqrs/data",
