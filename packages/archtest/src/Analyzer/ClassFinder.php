@@ -124,7 +124,7 @@ final class ClassFinder
 
             foreach ($remaining as $filePath) {
                 try {
-                    require $filePath;
+                    require_once $filePath;
                     self::$loadedFiles[$filePath] = true;
                 } catch (Error) {
                     $failed[] = $filePath;

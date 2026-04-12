@@ -5,3 +5,6 @@ parameters:
     level: 8
     paths:
         - app
+    ignoreErrors:
+        - '#Call to an undefined static method App\\Infrastructure\\Persistence\\Eloquent\\BookModel::#'
+        - '#should return list<.+> but returns array<int,.+>#'

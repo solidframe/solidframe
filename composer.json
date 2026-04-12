@@ -43,6 +43,7 @@
     },
     "autoload-dev": {
         "psr-4": {
+            "SolidFrame\\Archtest\\Tests\\": "packages/archtest/tests/",
             "SolidFrame\\PHPStanRules\\Tests\\": "packages/phpstan-rules/tests/",
             "SolidFrame\\Laravel\\Tests\\": "packages/laravel/tests/",
             "SolidFrame\\Symfony\\Tests\\": "packages/symfony/tests/"

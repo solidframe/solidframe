@@ -9,7 +9,7 @@ use SolidFrame\Archtest\Analyzer\ClassInfo;
 
 final readonly class EventDrivenPreset implements PresetInterface
 {
-    private const string DOMAIN_EVENT_INTERFACE = \SolidFrame\Core\Event\DomainEventInterface::class;
+    private const DOMAIN_EVENT_INTERFACE = \SolidFrame\Core\Event\DomainEventInterface::class;
 
     public function __construct(
         private string $eventDir,

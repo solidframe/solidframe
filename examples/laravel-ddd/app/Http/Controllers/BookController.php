@@ -20,7 +20,7 @@ final readonly class BookController
     public function index(Request $request): JsonResponse
     {
         $books = $this->bookService->listBooks(
-            author: $request->query('author'),
+            author: $request->string('author')->toString() ?: null,
             onlyAvailable: $request->query('available') === 'true',
         );
 

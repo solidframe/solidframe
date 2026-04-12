@@ -1,3 +1,14 @@
+parametersSchema:
+    solidframe: structure([
+        commandHandlerInterface: string()
+        queryHandlerInterface: string()
+        commandInterface: string()
+        queryInterface: string()
+        eventInterface: string()
+        valueObjectInterface: string()
+        aggregateRootClass: string()
+    ])
+
 parameters:
     solidframe:
         commandHandlerInterface: 'SolidFrame\Cqrs\CommandHandler'
