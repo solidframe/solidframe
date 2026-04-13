@@ -4,31 +4,12 @@ declare(strict_types=1);
 
 namespace {{ namespace }};
 
-use SolidFrame\Ddd\ValueObject\ValueObjectInterface;
+use SolidFrame\Ddd\ValueObject\StringValueObject;
 
-final readonly class {{ class }} implements ValueObjectInterface
+final readonly class {{ class }} extends StringValueObject
 {
-    private function __construct(private string $value)
+    public static function from(string $value): static
     {
-    }
-
-    public static function from(string $value): self
-    {
-        return new self($value);
-    }
-
-    public function value(): string
-    {
-        return $this->value;
-    }
-
-    public function equals(self $other): bool
-    {
-        return $this->value === $other->value;
-    }
-
-    public function __toString(): string
-    {
-        return $this->value;
+        return parent::from($value);
     }
 }
