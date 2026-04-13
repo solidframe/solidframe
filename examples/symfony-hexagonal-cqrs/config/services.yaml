@@ -1,0 +1,27 @@
+parameters:
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'
+        exclude:
+            - '../src/Domain/'
+            - '../src/Kernel.php'
+
+    App\Controller\:
+        resource: '../src/Controller/'
+        tags: ['controller.service_arguments']
+
+    Doctrine\DBAL\Connection:
+        factory: ['App\Infrastructure\Persistence\Dbal\ConnectionFactory', 'create']
+        arguments:
+            - '%env(resolve:DATABASE_URL)%'
+
+    App\Domain\Project\Port\ProjectRepository:
+        alias: App\Infrastructure\Persistence\Dbal\DbalProjectRepository
+
+    App\Domain\Task\Port\TaskRepository:
+        alias: App\Infrastructure\Persistence\Dbal\DbalTaskRepository

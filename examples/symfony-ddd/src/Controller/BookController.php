@@ -6,19 +6,19 @@ namespace App\Controller;
 
 use App\Application\Book\BookService;
 use App\Domain\Book\Book;
+use App\Http\RequestValidator;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Component\Validator\Constraints as Assert;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 #[Route('/api/books')]
 final readonly class BookController
 {
     public function __construct(
         private BookService $bookService,
-        private ValidatorInterface $validator,
+        private RequestValidator $requestValidator,
     ) {}
 
     #[Route('', methods: ['GET'])]
@@ -37,7 +37,7 @@ final readonly class BookController
     #[Route('', methods: ['POST'])]
     public function store(Request $request): JsonResponse
     {
-        $data = $this->validateRequest($request, new Assert\Collection([
+        $data = $this->requestValidator->validate($request, new Assert\Collection([
             'title' => [new Assert\NotBlank(), new Assert\Length(max: 255)],
             'author' => [new Assert\NotBlank(), new Assert\Length(max: 255)],
             'isbn' => [new Assert\NotBlank()],
@@ -63,7 +63,7 @@ final readonly class BookController
     #[Route('/{id}', methods: ['PUT'])]
     public function update(Request $request, string $id): JsonResponse
     {
-        $data = $this->validateRequest($request, new Assert\Collection([
+        $data = $this->requestValidator->validate($request, new Assert\Collection([
             'title' => [new Assert\NotBlank(), new Assert\Length(max: 255)],
             'author' => [new Assert\NotBlank(), new Assert\Length(max: 255)],
             'isbn' => [new Assert\NotBlank()],
@@ -90,7 +90,7 @@ final readonly class BookController
     #[Route('/{id}/borrow', methods: ['POST'])]
     public function borrow(Request $request, string $id): JsonResponse
     {
-        $data = $this->validateRequest($request, new Assert\Collection([
+        $data = $this->requestValidator->validate($request, new Assert\Collection([
             'borrower' => [new Assert\NotBlank(), new Assert\Length(max: 255)],
         ]));
 
@@ -123,30 +123,4 @@ final readonly class BookController
         ];
     }
 
-    /**
-     * @return array<string, mixed>
-     *
-     * @throws \Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException
-     */
-    private function validateRequest(Request $request, Assert\Collection $constraints): array
-    {
-        /** @var array<string, mixed> $data */
-        $data = json_decode($request->getContent(), true) ?? [];
-
-        $violations = $this->validator->validate($data, $constraints);
-
-        if ($violations->count() > 0) {
-            $errors = [];
-            foreach ($violations as $violation) {
-                $field = trim($violation->getPropertyPath(), '[]');
-                $errors[$field][] = $violation->getMessage();
-            }
-
-            throw new \Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException(
-                json_encode(['errors' => $errors], JSON_THROW_ON_ERROR),
-            );
-        }
-
-        return $data;
-    }
 }
