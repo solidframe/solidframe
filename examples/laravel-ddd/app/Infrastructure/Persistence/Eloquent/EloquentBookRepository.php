@@ -17,14 +17,14 @@ final readonly class EloquentBookRepository implements BookRepository
 {
     public function find(BookId $id): ?Book
     {
-        $model = BookModel::find($id->value());
+        $model = BookModel::query()->find($id->value());
 
-        return $model ? $this->toDomain($model) : null;
+        return $model instanceof BookModel ? $this->toDomain($model) : null;
     }
 
     public function save(Book $book): void
     {
-        BookModel::updateOrCreate(
+        BookModel::query()->updateOrCreate(
             ['id' => $book->identity()->value()],
             [
                 'title' => $book->title()->value(),
@@ -38,16 +38,17 @@ final readonly class EloquentBookRepository implements BookRepository
 
     public function delete(BookId $id): void
     {
-        BookModel::where('id', $id->value())->delete();
+        BookModel::query()->where('id', $id->value())->delete();
     }
 
     /** @return list<Book> */
     public function all(): array
     {
-        return BookModel::all()
-            ->map(fn (BookModel $model) => $this->toDomain($model))
-            ->values()
-            ->all();
+        return array_values(
+            BookModel::query()->get()
+                ->map(fn (BookModel $model) => $this->toDomain($model))
+                ->all(),
+        );
     }
 
     /** @return list<Book> */

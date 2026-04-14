@@ -5,6 +5,3 @@ parameters:
     level: 8
     paths:
         - app
-    ignoreErrors:
-        - '#Call to an undefined static method App\\Infrastructure\\Persistence\\Eloquent\\(Project|Task)Model::#'
-        - '#should return list<.+> but returns array<int,.+>#'

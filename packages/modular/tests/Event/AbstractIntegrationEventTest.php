@@ -14,12 +14,7 @@ final class AbstractIntegrationEventTest extends TestCase
     #[Test]
     public function returnsSourceModule(): void
     {
-        $event = new class ('billing') extends AbstractIntegrationEvent {
-            public function eventName(): string
-            {
-                return 'order.placed';
-            }
-        };
+        $event = new TestIntegrationEvent('billing');
 
         self::assertSame('billing', $event->sourceModule());
     }
@@ -29,12 +24,7 @@ final class AbstractIntegrationEventTest extends TestCase
     {
         $before = new DateTimeImmutable();
 
-        $event = new class ('billing') extends AbstractIntegrationEvent {
-            public function eventName(): string
-            {
-                return 'order.placed';
-            }
-        };
+        $event = new TestIntegrationEvent('billing');
 
         self::assertGreaterThanOrEqual($before, $event->occurredAt());
     }
@@ -44,13 +34,17 @@ final class AbstractIntegrationEventTest extends TestCase
     {
         $date = new DateTimeImmutable('2026-01-01');
 
-        $event = new class ('billing', $date) extends AbstractIntegrationEvent {
-            public function eventName(): string
-            {
-                return 'order.placed';
-            }
-        };
+        $event = new TestIntegrationEvent('billing', $date);
 
         self::assertSame($date, $event->occurredAt());
+    }
+}
+
+/** @internal */
+final readonly class TestIntegrationEvent extends AbstractIntegrationEvent
+{
+    public function eventName(): string
+    {
+        return 'order.placed';
     }
 }

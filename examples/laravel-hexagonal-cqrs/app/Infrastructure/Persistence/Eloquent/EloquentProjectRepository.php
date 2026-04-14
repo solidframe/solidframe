@@ -14,14 +14,14 @@ final readonly class EloquentProjectRepository implements ProjectRepository
 {
     public function find(ProjectId $id): ?Project
     {
-        $model = ProjectModel::find($id->value());
+        $model = ProjectModel::query()->find($id->value());
 
-        return $model ? $this->toDomain($model) : null;
+        return $model instanceof ProjectModel ? $this->toDomain($model) : null;
     }
 
     public function save(Project $project): void
     {
-        ProjectModel::updateOrCreate(
+        ProjectModel::query()->updateOrCreate(
             ['id' => $project->identity()->value()],
             [
                 'name' => $project->name()->value(),
@@ -34,10 +34,11 @@ final readonly class EloquentProjectRepository implements ProjectRepository
     /** @return list<Project> */
     public function all(): array
     {
-        return ProjectModel::all()
-            ->map(fn (ProjectModel $model) => $this->toDomain($model))
-            ->values()
-            ->all();
+        return array_values(
+            ProjectModel::query()->get()
+                ->map(fn (ProjectModel $model) => $this->toDomain($model))
+                ->all(),
+        );
     }
 
     private function toDomain(ProjectModel $model): Project

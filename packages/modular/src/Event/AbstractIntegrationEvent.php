@@ -6,12 +6,12 @@ namespace SolidFrame\Modular\Event;
 
 use DateTimeImmutable;
 
-abstract class AbstractIntegrationEvent implements IntegrationEventInterface
+abstract readonly class AbstractIntegrationEvent implements IntegrationEventInterface
 {
-    private readonly DateTimeImmutable $occurredAt;
+    private DateTimeImmutable $occurredAt;
 
     public function __construct(
-        private readonly string $sourceModule,
+        private string $sourceModule,
         ?DateTimeImmutable $occurredAt = null,
     ) {
         $this->occurredAt = $occurredAt ?? new DateTimeImmutable();

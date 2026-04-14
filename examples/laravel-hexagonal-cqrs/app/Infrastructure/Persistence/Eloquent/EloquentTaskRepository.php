@@ -18,14 +18,14 @@ final readonly class EloquentTaskRepository implements TaskRepository
 {
     public function find(TaskId $id): ?Task
     {
-        $model = TaskModel::find($id->value());
+        $model = TaskModel::query()->find($id->value());
 
-        return $model ? $this->toDomain($model) : null;
+        return $model instanceof TaskModel ? $this->toDomain($model) : null;
     }
 
     public function save(Task $task): void
     {
-        TaskModel::updateOrCreate(
+        TaskModel::query()->updateOrCreate(
             ['id' => $task->identity()->value()],
             [
                 'project_id' => $task->projectId()->value(),
@@ -40,46 +40,50 @@ final readonly class EloquentTaskRepository implements TaskRepository
 
     public function delete(TaskId $id): void
     {
-        TaskModel::where('id', $id->value())->delete();
+        TaskModel::query()->where('id', $id->value())->delete();
     }
 
     /** @return list<Task> */
     public function findByProject(ProjectId $projectId): array
     {
-        return TaskModel::where('project_id', $projectId->value())
-            ->get()
-            ->map(fn (TaskModel $model) => $this->toDomain($model))
-            ->values()
-            ->all();
+        return array_values(
+            TaskModel::query()->where('project_id', $projectId->value())
+                ->get()
+                ->map(fn (TaskModel $model) => $this->toDomain($model))
+                ->all(),
+        );
     }
 
     /** @return list<Task> */
     public function findByStatus(TaskStatus $status): array
     {
-        return TaskModel::where('status', $status->value)
-            ->get()
-            ->map(fn (TaskModel $model) => $this->toDomain($model))
-            ->values()
-            ->all();
+        return array_values(
+            TaskModel::query()->where('status', $status->value)
+                ->get()
+                ->map(fn (TaskModel $model) => $this->toDomain($model))
+                ->all(),
+        );
     }
 
     /** @return list<Task> */
     public function findByAssignee(string $assignee): array
     {
-        return TaskModel::where('assignee', $assignee)
-            ->get()
-            ->map(fn (TaskModel $model) => $this->toDomain($model))
-            ->values()
-            ->all();
+        return array_values(
+            TaskModel::query()->where('assignee', $assignee)
+                ->get()
+                ->map(fn (TaskModel $model) => $this->toDomain($model))
+                ->all(),
+        );
     }
 
     /** @return list<Task> */
     public function all(): array
     {
-        return TaskModel::all()
-            ->map(fn (TaskModel $model) => $this->toDomain($model))
-            ->values()
-            ->all();
+        return array_values(
+            TaskModel::query()->get()
+                ->map(fn (TaskModel $model) => $this->toDomain($model))
+                ->all(),
+        );
     }
 
     private function toDomain(TaskModel $model): Task

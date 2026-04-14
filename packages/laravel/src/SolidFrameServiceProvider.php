@@ -234,7 +234,7 @@ final class SolidFrameServiceProvider extends ServiceProvider
             return [];
         }
 
-        if (! class_exists(\SolidFrame\EventDriven\EventListener::class)) {
+        if (! interface_exists(\SolidFrame\EventDriven\EventListener::class)) {
             return [];
         }
 
