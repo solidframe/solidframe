@@ -204,11 +204,44 @@ solidframe/laravel       ← Laravel bridge (depends on core)
 solidframe/symfony       ← Symfony bridge (depends on core)
 ```
 
+## Examples
+
+End-to-end example applications demonstrating SolidFrame patterns in real frameworks.
+Each example is its own repository — clone, install, and run standalone.
+
+### DDD — Library management
+
+| Framework | Repository |
+|---|---|
+| Laravel | [solidframe/example-laravel-ddd](https://github.com/solidframe/example-laravel-ddd) |
+| Symfony | [solidframe/example-symfony-ddd](https://github.com/solidframe/example-symfony-ddd) |
+
+### Hexagonal + CQRS — Task management
+
+| Framework | Repository |
+|---|---|
+| Laravel | [solidframe/example-laravel-hexagonal-cqrs](https://github.com/solidframe/example-laravel-hexagonal-cqrs) |
+| Symfony | [solidframe/example-symfony-hexagonal-cqrs](https://github.com/solidframe/example-symfony-hexagonal-cqrs) |
+
+### Modular Monolith + CQRS + Saga — E-commerce
+
+| Framework | Repository |
+|---|---|
+| Laravel | [solidframe/example-laravel-modular-cqrs](https://github.com/solidframe/example-laravel-modular-cqrs) |
+| Symfony | [solidframe/example-symfony-modular-cqrs](https://github.com/solidframe/example-symfony-modular-cqrs) |
+
+### Event Sourcing + CQRS — Digital wallet
+
+| Framework | Repository |
+|---|---|
+| Laravel | [solidframe/example-laravel-event-sourced](https://github.com/solidframe/example-laravel-event-sourced) |
+| Symfony | [solidframe/example-symfony-event-sourced](https://github.com/solidframe/example-symfony-event-sourced) |
+
 ## Requirements
 
 - PHP 8.2+
-- Laravel 10/11/12 (for solidframe/laravel)
-- Symfony 6.4/7.x (for solidframe/symfony)
+- Laravel 10/11/12/13 (for solidframe/laravel)
+- Symfony 6.4/7.x/8.x (for solidframe/symfony)
 
 ## License
 
