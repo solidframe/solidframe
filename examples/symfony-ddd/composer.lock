@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "74ce6f975b339486a6e000e95be48783",
+    "content-hash": "ec0ea5a9e8d6cf8cde45be3b73629ad5",
     "packages": [
         {
             "name": "doctrine/dbal",
@@ -364,11 +364,17 @@
         },
         {
             "name": "solidframe/core",
-            "version": "dev-main",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/solidframe/core.git",
+                "reference": "787e6b8947c1c6506c373a47b4f8cc2c8ac56c6a"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../packages/core",
-                "reference": "03b50e9f11789cbaf4e1e09f4584115d2165985b"
+                "type": "zip",
+                "url": "https://api.github.com/repos/solidframe/core/zipball/787e6b8947c1c6506c373a47b4f8cc2c8ac56c6a",
+                "reference": "787e6b8947c1c6506c373a47b4f8cc2c8ac56c6a",
+                "shasum": ""
             },
             "require": {
                 "php": "^8.2"
@@ -387,11 +393,7 @@
                     "SolidFrame\\Core\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "SolidFrame\\Core\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -402,17 +404,25 @@
                 }
             ],
             "description": "Core interfaces, base classes, Result type, and Pipeline for SolidFrame",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/solidframe/core/issues",
+                "source": "https://github.com/solidframe/core/tree/v0.1.0"
+            },
+            "time": "2026-04-11T20:42:49+00:00"
         },
         {
             "name": "solidframe/ddd",
-            "version": "dev-main",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/solidframe/ddd.git",
+                "reference": "27ae6c1f8738e45d8c961112baa1cc9d2d1c23b0"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../packages/ddd",
-                "reference": "94f7ec815aa5e26c9966e046e36236f6fa4e8650"
+                "type": "zip",
+                "url": "https://api.github.com/repos/solidframe/ddd/zipball/27ae6c1f8738e45d8c961112baa1cc9d2d1c23b0",
+                "reference": "27ae6c1f8738e45d8c961112baa1cc9d2d1c23b0",
+                "shasum": ""
             },
             "require": {
                 "php": "^8.2",
@@ -429,11 +439,7 @@
                     "SolidFrame\\Ddd\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "SolidFrame\\Ddd\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -444,17 +450,25 @@
                 }
             ],
             "description": "DDD building blocks: ValueObject, Entity, AggregateRoot, Specification for SolidFrame",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/solidframe/ddd/issues",
+                "source": "https://github.com/solidframe/ddd/tree/v0.1.0"
+            },
+            "time": "2026-04-11T20:42:49+00:00"
         },
         {
             "name": "solidframe/symfony",
-            "version": "dev-main",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/solidframe/symfony.git",
+                "reference": "25ffd72fbd1d2e44b87ad495ec91306a5eff2485"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../packages/symfony",
-                "reference": "76c6d76a0d956d40ffd9e0f42cf3e0fe38bc9897"
+                "type": "zip",
+                "url": "https://api.github.com/repos/solidframe/symfony/zipball/25ffd72fbd1d2e44b87ad495ec91306a5eff2485",
+                "reference": "25ffd72fbd1d2e44b87ad495ec91306a5eff2485",
+                "shasum": ""
             },
             "require": {
                 "php": "^8.2",
@@ -489,11 +503,7 @@
                     "SolidFrame\\Symfony\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "SolidFrame\\Symfony\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -504,9 +514,11 @@
                 }
             ],
             "description": "Symfony bridge for SolidFrame architectural packages",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/solidframe/symfony/issues",
+                "source": "https://github.com/solidframe/symfony/tree/v0.1.0"
+            },
+            "time": "2026-04-13T19:55:24+00:00"
         },
         {
             "name": "symfony/cache",
@@ -4567,11 +4579,17 @@
         },
         {
             "name": "solidframe/archtest",
-            "version": "dev-main",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/solidframe/archtest.git",
+                "reference": "7f0e9f09de0b32bb5fef5a0591aa404d1e651e9b"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../packages/archtest",
-                "reference": "1a29809e2395f598db3ccab0b7503bf813d969f6"
+                "type": "zip",
+                "url": "https://api.github.com/repos/solidframe/archtest/zipball/7f0e9f09de0b32bb5fef5a0591aa404d1e651e9b",
+                "reference": "7f0e9f09de0b32bb5fef5a0591aa404d1e651e9b",
+                "shasum": ""
             },
             "require": {
                 "php": "^8.2",
@@ -4588,11 +4606,7 @@
                     "SolidFrame\\Archtest\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "SolidFrame\\Archtest\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4603,17 +4617,25 @@
                 }
             ],
             "description": "Architecture testing with fluent API: enforce DDD, CQRS, modular rules as PHPUnit tests for SolidFrame",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/solidframe/archtest/issues",
+                "source": "https://github.com/solidframe/archtest/tree/v0.1.0"
+            },
+            "time": "2026-04-12T20:12:50+00:00"
         },
         {
             "name": "solidframe/phpstan-rules",
-            "version": "dev-main",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/solidframe/phpstan-rules.git",
+                "reference": "584c1f3990eb166bbc37074bd3c793a9336f1b36"
+            },
             "dist": {
-                "type": "path",
-                "url": "../../packages/phpstan-rules",
-                "reference": "587ec2dfa0023e1809bc5b8c1b02a4ea85d84791"
+                "type": "zip",
+                "url": "https://api.github.com/repos/solidframe/phpstan-rules/zipball/584c1f3990eb166bbc37074bd3c793a9336f1b36",
+                "reference": "584c1f3990eb166bbc37074bd3c793a9336f1b36",
+                "shasum": ""
             },
             "require": {
                 "php": "^8.2",
@@ -4635,11 +4657,7 @@
                     "SolidFrame\\PHPStanRules\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "SolidFrame\\PHPStanRules\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4650,9 +4668,11 @@
                 }
             ],
             "description": "PHPStan rules for DDD, CQRS, and Event Sourcing architectural enforcement",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/solidframe/phpstan-rules/issues",
+                "source": "https://github.com/solidframe/phpstan-rules/tree/v0.1.0"
+            },
+            "time": "2026-04-12T20:12:50+00:00"
         },
         {
             "name": "staabm/side-effects-detector",
@@ -4986,12 +5006,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "solidframe/archtest": 20,
-        "solidframe/ddd": 20,
-        "solidframe/phpstan-rules": 20,
-        "solidframe/symfony": 20
-    },
+    "stability-flags": {},
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

@@ -3,7 +3,6 @@ services:
     image: php:8.4-cli
     volumes:
       - .:/app
-      - ../../packages:/packages
     working_dir: /app
     command: php -S 0.0.0.0:8000 -t public
     ports:
@@ -26,7 +25,6 @@ services:
     image: php:8.4-cli
     volumes:
       - .:/app
-      - ../../packages:/packages
     working_dir: /app
     entrypoint: php vendor/bin/phpunit
 
@@ -34,7 +32,6 @@ services:
     image: composer:latest
     volumes:
       - .:/app
-      - ../../packages:/packages
     working_dir: /app
 
 volumes:

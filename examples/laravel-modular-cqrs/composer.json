@@ -5,27 +5,16 @@
     "description": "SolidFrame example: E-commerce with Modular Monolith, CQRS and Saga in Laravel",
     "keywords": ["solidframe", "modular", "cqrs", "saga", "laravel", "example"],
     "license": "MIT",
-    "repositories": [
-        {"type": "path", "url": "../../packages/core"},
-        {"type": "path", "url": "../../packages/ddd"},
-        {"type": "path", "url": "../../packages/cqrs"},
-        {"type": "path", "url": "../../packages/event-driven"},
-        {"type": "path", "url": "../../packages/modular"},
-        {"type": "path", "url": "../../packages/saga"},
-        {"type": "path", "url": "../../packages/archtest"},
-        {"type": "path", "url": "../../packages/phpstan-rules"},
-        {"type": "path", "url": "../../packages/laravel"}
-    ],
     "require": {
         "php": "^8.3",
         "laravel/framework": "^13.0",
         "laravel/tinker": "^3.0",
-        "solidframe/cqrs": "@dev",
-        "solidframe/ddd": "@dev",
-        "solidframe/event-driven": "@dev",
-        "solidframe/laravel": "@dev",
-        "solidframe/modular": "@dev",
-        "solidframe/saga": "@dev"
+        "solidframe/cqrs": "^0.1",
+        "solidframe/ddd": "^0.1",
+        "solidframe/event-driven": "^0.1",
+        "solidframe/laravel": "^0.1",
+        "solidframe/modular": "^0.1",
+        "solidframe/saga": "^0.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -34,8 +23,8 @@
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
         "phpunit/phpunit": "^12.5.12",
-        "solidframe/archtest": "@dev",
-        "solidframe/phpstan-rules": "@dev"
+        "solidframe/archtest": "^0.1",
+        "solidframe/phpstan-rules": "^0.1"
     },
     "autoload": {
         "psr-4": {

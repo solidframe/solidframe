@@ -5,19 +5,12 @@
     "description": "SolidFrame example: Library management with DDD patterns in Laravel",
     "keywords": ["solidframe", "ddd", "laravel", "example"],
     "license": "MIT",
-    "repositories": [
-        {"type": "path", "url": "../../packages/core"},
-        {"type": "path", "url": "../../packages/ddd"},
-        {"type": "path", "url": "../../packages/archtest"},
-        {"type": "path", "url": "../../packages/phpstan-rules"},
-        {"type": "path", "url": "../../packages/laravel"}
-    ],
     "require": {
         "php": "^8.3",
         "laravel/framework": "^13.0",
         "laravel/tinker": "^3.0",
-        "solidframe/ddd": "@dev",
-        "solidframe/laravel": "@dev"
+        "solidframe/ddd": "^0.1",
+        "solidframe/laravel": "^0.1"
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",
@@ -26,8 +19,8 @@
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.6",
         "phpunit/phpunit": "^12.5.12",
-        "solidframe/archtest": "@dev",
-        "solidframe/phpstan-rules": "@dev"
+        "solidframe/archtest": "^0.1",
+        "solidframe/phpstan-rules": "^0.1"
     },
     "autoload": {
         "psr-4": {
