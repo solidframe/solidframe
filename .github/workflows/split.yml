@@ -1,0 +1,58 @@
+name: Split monorepo packages
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - 'v*'
+
+jobs:
+  split:
+    name: Split ${{ matrix.package }}
+    runs-on: ubuntu-latest
+    if: github.repository == 'solidframe/solidframe'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - package: archtest
+            target: solidframe/archtest
+          - package: core
+            target: solidframe/core
+          - package: cqrs
+            target: solidframe/cqrs
+          - package: ddd
+            target: solidframe/ddd
+          - package: event-driven
+            target: solidframe/event-driven
+          - package: event-sourcing
+            target: solidframe/event-sourcing
+          - package: laravel
+            target: solidframe/laravel
+          - package: modular
+            target: solidframe/modular
+          - package: phpstan-rules
+            target: solidframe/phpstan-rules
+          - package: saga
+            target: solidframe/saga
+          - package: symfony
+            target: solidframe/symfony
+
+    steps:
+      - name: Checkout monorepo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Split ${{ matrix.package }} to ${{ matrix.target }}
+        uses: danharrin/monorepo-split-github-action@v2.3.0
+        with:
+          package_directory: packages/${{ matrix.package }}
+          repository_organization: solidframe
+          repository_name: ${{ matrix.package }}
+          user_name: "Abdulkadir Posul"
+          user_email: "abdulkadir-posul@users.noreply.github.com"
+          branch: main
+        env:
+          GITHUB_TOKEN: ${{ secrets.SPLIT_TOKEN }}
