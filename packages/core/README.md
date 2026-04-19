@@ -2,7 +2,7 @@
 
 Core interfaces, base classes, Pipeline, and Middleware for the SolidFrame ecosystem.
 
-All SolidFrame packages depend on this package. It provides the shared contracts that keep the ecosystem consistent and composable.
+Every SolidFrame package depends on this one. It provides the shared contracts that keep the ecosystem consistent and composable.
 
 ## Installation
 
