@@ -174,3 +174,7 @@ SagaStatus::Failed;     // 'failed'      — saga failed, compensations applied
 - [solidframe/cqrs](../cqrs) — Saga handlers dispatch commands
 - [solidframe/laravel](../laravel) — Database SagaStore, `make:saga`, `solidframe:saga:status`
 - [solidframe/symfony](../symfony) — DBAL SagaStore, same generators
+
+## Contributing
+
+This repository is a read-only split of the [solidframe/solidframe](https://github.com/solidframe/solidframe) monorepo, auto-synced on every push to `main`. Issues, pull requests, and discussions belong in the monorepo.

@@ -221,3 +221,7 @@ $canAccess = (new IsAdult())->or(new HasParentalConsent());
 - [solidframe/archtest](../archtest) — Enforce DDD rules in tests
 - [solidframe/laravel](../laravel) — `make:entity`, `make:value-object`, `make:aggregate-root`
 - [solidframe/symfony](../symfony) — Same generators for Symfony
+
+## Contributing
+
+This repository is a read-only split of the [solidframe/solidframe](https://github.com/solidframe/solidframe) monorepo, auto-synced on every push to `main`. Issues, pull requests, and discussions belong in the monorepo.

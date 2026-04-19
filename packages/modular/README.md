@@ -168,3 +168,7 @@ final readonly class OrderTranslator implements TranslatorInterface
 - [solidframe/archtest](../archtest) — Enforce module isolation rules
 - [solidframe/laravel](../laravel) — ModuleServiceProvider, auto-discovery, `make:module`, `solidframe:module:list`
 - [solidframe/symfony](../symfony) — Module discovery, `make:module`, `solidframe:module:list`
+
+## Contributing
+
+This repository is a read-only split of the [solidframe/solidframe](https://github.com/solidframe/solidframe) monorepo, auto-synced on every push to `main`. Issues, pull requests, and discussions belong in the monorepo.

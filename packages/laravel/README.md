@@ -249,3 +249,7 @@ Optional packages (installed as needed):
 - [solidframe/modular](../modular) — Module contracts
 - [solidframe/saga](../saga) — Saga lifecycle
 - [solidframe/symfony](../symfony) — Symfony alternative
+
+## Contributing
+
+This repository is a read-only split of the [solidframe/solidframe](https://github.com/solidframe/solidframe) monorepo, auto-synced on every push to `main`. Issues, pull requests, and discussions belong in the monorepo.

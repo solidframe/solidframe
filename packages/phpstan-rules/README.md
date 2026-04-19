@@ -235,3 +235,7 @@ Use both for comprehensive architectural enforcement.
 - [solidframe/ddd](../ddd) — ValueObjectInterface
 - [solidframe/event-sourcing](../event-sourcing) — AbstractEventSourcedAggregateRoot
 - [solidframe/archtest](../archtest) — Complementary PHPUnit-based architecture tests
+
+## Contributing
+
+This repository is a read-only split of the [solidframe/solidframe](https://github.com/solidframe/solidframe) monorepo, auto-synced on every push to `main`. Issues, pull requests, and discussions belong in the monorepo.

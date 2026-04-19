@@ -140,3 +140,7 @@ $eventBus = new EventBus($resolver, [
 - [solidframe/event-sourcing](../event-sourcing) — Persist events as source of truth
 - [solidframe/laravel](../laravel) — Auto-discovery, DI, `make:domain-event`, `make:event-listener`
 - [solidframe/symfony](../symfony) — Compiler pass, DI, same generators
+
+## Contributing
+
+This repository is a read-only split of the [solidframe/solidframe](https://github.com/solidframe/solidframe) monorepo, auto-synced on every push to `main`. Issues, pull requests, and discussions belong in the monorepo.

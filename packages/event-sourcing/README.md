@@ -220,3 +220,7 @@ These methods are `protected` and must not be called directly.
 - [solidframe/cqrs](../cqrs) — Command/Query handlers that use event-sourced aggregates
 - [solidframe/laravel](../laravel) — Database EventStore/SnapshotStore, migrations
 - [solidframe/symfony](../symfony) — DBAL EventStore/SnapshotStore, schema SQL
+
+## Contributing
+
+This repository is a read-only split of the [solidframe/solidframe](https://github.com/solidframe/solidframe) monorepo, auto-synced on every push to `main`. Issues, pull requests, and discussions belong in the monorepo.

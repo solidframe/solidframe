@@ -162,3 +162,7 @@ One handler per command/query. Multiple handlers for the same message type will 
 - [solidframe/event-driven](../event-driven) — Dispatch domain events after commands
 - [solidframe/laravel](../laravel) — Auto-discovery, DI, `make:cqrs-command`, `make:query`
 - [solidframe/symfony](../symfony) — Compiler pass, DI, same generators
+
+## Contributing
+
+This repository is a read-only split of the [solidframe/solidframe](https://github.com/solidframe/solidframe) monorepo, auto-synced on every push to `main`. Issues, pull requests, and discussions belong in the monorepo.

@@ -209,3 +209,7 @@ Arch::presetFrom(new MyCustomPreset(__DIR__ . '/../src'))->assert();
 - [solidframe/ddd](../ddd) — ValueObject, Entity conventions enforced
 - [solidframe/cqrs](../cqrs) — Command/Query immutability enforced
 - [solidframe/phpstan-rules](../phpstan-rules) — Complementary static analysis rules
+
+## Contributing
+
+This repository is a read-only split of the [solidframe/solidframe](https://github.com/solidframe/solidframe) monorepo, auto-synced on every push to `main`. Issues, pull requests, and discussions belong in the monorepo.
